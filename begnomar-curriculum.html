@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Begnomar dos Santos Porto | Perfil</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --text:#eaf0ff;
+      --muted: rgba(234,240,255,.75);
+      --line: rgba(255,255,255,.12);
+      --accent:#7c5cff;
+      --accent2:#22c55e;
+      --shadow: 0 16px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(124,92,255,.28), transparent 60%),
+        radial-gradient(900px 500px at 90% 20%, rgba(34,197,94,.18), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height:1.5;
+    }
+    a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(124,92,255,.35);
+    }
+    a:hover{ border-bottom-color: rgba(124,92,255,.9); }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 18px 60px;
+    }
+    header{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      margin-bottom: 18px;
+    }
+    .title{
+      background: linear-gradient(90deg, rgba(124,92,255,.95), rgba(34,197,94,.85));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color: transparent;
+      font-weight: 850;
+      font-size: clamp(22px, 4vw, 34px);
+      margin: 0 0 6px;
+      letter-spacing: .2px;
+    }
+    .sub{
+      color: var(--muted);
+      margin: 0;
+      font-size: 15.5px;
+      max-width: 64ch;
+    }
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-end;
+      margin-top: 8px;
+    }
+    .pill{
+      border: 1px solid var(--line);
+      background: var(--card);
+      padding: 10px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .pill b{ color: var(--text); }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+      .pillrow{ justify-content:flex-start; }
+      header{ flex-direction:column; }
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 16px;
+      overflow:hidden;
+    }
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+      color: rgba(234,240,255,.95);
+    }
+    .lead{
+      margin:0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+    ul{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    li{ margin: 8px 0; }
+    .links{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+      margin-top: 10px;
+    }
+    .linkbox{
+      background: var(--card2);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      padding: 12px 12px;
+    }
+    .linkbox .k{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(124,92,255,.18);
+      flex: 0 0 auto;
+    }
+    .dot.green{
+      background: var(--accent2);
+      box-shadow: 0 0 0 5px rgba(34,197,94,.16);
+    }
+    .linkbox a{
+      border-bottom: 1px solid rgba(255,255,255,.18);
+      word-break: break-word;
+    }
+    .footer{
+      margin-top: 14px;
+      color: rgba(234,240,255,.6);
+      font-size: 12.5px;
+    }
+    .quote{
+      padding: 12px 14px;
+      border-left: 3px solid rgba(124,92,255,.75);
+      background: rgba(124,92,255,.08);
+      border-radius: 12px;
+      color: rgba(234,240,255,.82);
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    @media (max-width: 560px){
+      .two{ grid-template-columns: 1fr; }
+    }
+    .meta{
+      background: rgba(255,255,255,.04);
+      border: 1px dashed rgba(255,255,255,.16);
+      border-radius: 14px;
+      padding: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .meta b{ color: var(--text); }
+    .btn{
+      display:inline-block;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(124,92,255,.18);
+      border: 1px solid rgba(124,92,255,.38);
+      color: var(--text);
+    }
+    .btn:hover{ background: rgba(124,92,255,.26); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1 class="title">Begnomar dos Santos Porto</h1>
+        <p class="sub">Professor, Pesquisador e Desenvolvedor Independente</p>
+      </div>
+      <div class="pillrow" aria-label="Destaques">
+        <div class="pill"><b>DeSci</b> • Ciência descentralizada</div>
+        <div class="pill"><b>Ciência Aberta</b> • Livre e Irrestrita</div>
+        <div class="pill"><b>Blockchain</b> • Comprovas de anterioridade</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Projetos & Autorias</h2>
+        <p class="lead">
+          Autor e desenvolvedor de iniciativas em computação por topologia, linguagens computacionais baseadas em geometria/topologia
+          e protocolos bioinspirados para redução de ambiguidade em LLMs.
+        </p>
+
+        <div class="links">
+          <div class="linkbox">
+            <div class="k"><span class="dot"></span><span>Comunidade / Linha emergente</span></div>
+            <a href="https://zenodo.org/communities/emerging_computing_paradigm" target="_blank" rel="noopener">
+              emerging computing paradigm (Zenodo)
+            </a>
+          </div>
+
+          <div class="linkbox">
+            <div class="k"><span class="dot"></span><span>CTCE • Computação por Topologia de Campos Eletromagnéticos</span></div>
+            <div class="k" style="margin-bottom:0"><span style="height:0"></span><span style="opacity:.75">—</span></div>
+            <div style="color:rgba(234,240,255,.75); font-size:13.5px; margin-top:2px">
+              CTCE- Computação por Topologia de Campos Eletromagnéticos.
+            </div>
+          </div>
+
+          <div class="linkbox">
+            <div class="k"><span class="dot"></span><span>Gebit • Linguagem Computacional baseada em Geometria / Topologia</span></div>
+            <div style="color:rgba(234,240,255,.75); font-size:13.5px; margin-top:2px">
+              Gebit- Linguagem Computacional baseada em Geometria / Topologia.
+            </div>
+          </div>
+
+          <div class="linkbox">
+            <div class="k"><span class="dot"></span><span>TBA • Protocolos bioinspirados para redução de ambiguidade em LLMs</span></div>
+            <div style="color:rgba(234,240,255,.75); font-size:13.5px; margin-top:2px">
+              TBA- Protocolos bioinspirados para redução de ambiguidade em LLMs.
+            </div>
+          </div>
+
+          <div class="linkbox">
+            <div class="k"><span class="dot green"></span><span>CTGV System • PoC prática + formalização em Python</span></div>
+            <a href="https://github.com/Bear-urso/CTGV-System-V-1.5" target="_blank" rel="noopener">
+              CTGV-System-V-1.5 (GitHub)
+            </a>
+          </div>
+
+          <div class="linkbox">
+            <div class="k"><span class="dot green"></span><span>Licença • LIACC</span></div>
+            <a href="https://github.com/Bear-urso/LICENSE-LIACC-" target="_blank" rel="noopener">
+              LIACC - Licença para Inovação Aberta e Capitalização Colaborativa
+            </a>
+          </div>
+        </div>
+
+        <div class="quote">
+          Comprovas de anterioridade registradas em blockchain.<br/>
+          Acredito no progresso através da exposição das Provas de Competências.<br/>
+          Abomino burocracia e sou ativista da soberania, autonomia e independência.
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>DeSci, Ciência Aberta & Produções</h2>
+        <p class="lead">
+          Defendo Ciência Aberta Livre e Irrestrita. “Pois os Saberes são patrimônio da humanidade”
+          — e através da DeSci valorizaremos e perpetuaremos o conhecimento e seus autores.
+        </p>
+
+        <div class="two">
+          <div class="meta">
+            <b>Publicações (exemplos)</b><br/>
+            Zenodo • ResearchGate • scienceopen.com • OSF • Fighshere • archive.org
+          </div>
+          <div class="meta">
+            <b>E principalmente em</b><br/>
+            pragraph.com • desci.world • memo.cash • NOSTR
+          </div>
+        </div>
+
+        <h2 style="margin-top:14px">Identificadores</h2>
+        <div class="links" style="margin-top:6px">
+          <div class="linkbox">
+            <div class="k"><span class="dot"></span><span>ORCID</span></div>
+            <a href="https://orcid.org/0009-0002-6109-7443" target="_blank" rel="noopener">
+              0009-0002-6109-7443
+            </a>
+          </div>
+
+          <div class="linkbox">
+            <div class="k"><span class="dot"></span><span>ResearchID</span></div>
+            <a href="https://researchid.co/begnomar" target="_blank" rel="noopener">
+              researchid.co/begnomar
+            </a>
+            <div style="height:6px"></div>
+            <a href="https://researchid.co/rid159975" target="_blank" rel="noopener">
+              researchid.co/rid159975
+            </a>
+          </div>
+
+          <div class="linkbox">
+            <div class="k"><span class="dot"></span><span>Lattes</span></div>
+            <a href="http://lattes.cnpq.br/7980004971638916" target="_blank" rel="noopener">
+              ID Lattes: 7980004971638916
+            </a>
+          </div>
+        </div>
+
+        <h2 style="margin-top:14px">Contato</h2>
+        <div class="linkbox" style="margin-top:6px">
+          <div class="k"><span class="dot green"></span><span>Gravatar</span></div>
+          <a href="https://br.gravatar.com/begnomar" target="_blank" rel="noopener">
+            https://br.gravatar.com/begnomar
+          </a>
+        </div>
+
+        <a class="btn" href="https://unstoppabledomains.com" target="_blank" rel="noopener">
+          Abrir Unstoppable Domains
+        </a>
+
+        <div class="footer">Página em HTML pronta para colar/servir via seu domínio Web3.</div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
