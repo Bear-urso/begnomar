@@ -5,192 +5,253 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Begnomar dos Santos Porto | Perfil</title>
   <style>
-    :root{
-      --bg:#0b1020;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.09);
-      --text:#eaf0ff;
-      --muted: rgba(234,240,255,.75);
-      --line: rgba(255,255,255,.12);
-      --accent:#7c5cff;
-      --accent2:#22c55e;
-      --shadow: 0 16px 40px rgba(0,0,0,.35);
+    :root {
+      --bg: #0b1020;
+      --card: rgba(255, 255, 255, .06);
+      --card2: rgba(255, 255, 255, .09);
+      --text: #eaf0ff;
+      --muted: rgba(234, 240, 255, .75);
+      --line: rgba(255, 255, 255, .12);
+      --accent: #7c5cff;
+      --accent2: #22c55e;
+      --shadow: 0 16px 40px rgba(0, 0, 0, .35);
       --radius: 18px;
     }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
       background:
-        radial-gradient(1200px 600px at 15% 10%, rgba(124,92,255,.28), transparent 60%),
-        radial-gradient(900px 500px at 90% 20%, rgba(34,197,94,.18), transparent 55%),
+        radial-gradient(1200px 600px at 15% 10%, rgba(124, 92, 255, .28), transparent 60%),
+        radial-gradient(900px 500px at 90% 20%, rgba(34, 197, 94, .18), transparent 55%),
         var(--bg);
       color: var(--text);
-      line-height:1.5;
+      line-height: 1.5;
     }
-    a{
+
+    a {
       color: inherit;
       text-decoration: none;
-      border-bottom: 1px solid rgba(124,92,255,.35);
+      border-bottom: 1px solid rgba(124, 92, 255, .35);
+      transition: border-color .2s ease, background-color .2s ease;
     }
-    a:hover{ border-bottom-color: rgba(124,92,255,.9); }
-    .wrap{
+
+    a:hover {
+      border-bottom-color: rgba(124, 92, 255, .9);
+    }
+
+    .wrap {
       max-width: 980px;
       margin: 0 auto;
       padding: 34px 18px 60px;
     }
-    header{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-      justify-content:space-between;
+
+    header {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      justify-content: space-between;
       margin-bottom: 18px;
     }
-    .title{
-      background: linear-gradient(90deg, rgba(124,92,255,.95), rgba(34,197,94,.85));
-      -webkit-background-clip:text;
-      background-clip:text;
+
+    .title {
+      background: linear-gradient(90deg, rgba(124, 92, 255, .95), rgba(34, 197, 94, .85));
+      -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
-      font-weight: 850;
+      font-weight: 800;
       font-size: clamp(22px, 4vw, 34px);
       margin: 0 0 6px;
       letter-spacing: .2px;
     }
-    .sub{
+
+    .sub {
       color: var(--muted);
       margin: 0;
       font-size: 15.5px;
       max-width: 64ch;
     }
-    .pillrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:flex-end;
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
       margin-top: 8px;
     }
-    .pill{
+
+    .pill {
       border: 1px solid var(--line);
       background: var(--card);
-      padding: 10px 12px;
+      padding: 10px 14px;
       border-radius: 999px;
-      color: var(--muted);
+      color: var(--text);
       font-size: 13px;
+      font-weight: 600;
       white-space: nowrap;
     }
-    .pill b{ color: var(--text); }
-    .grid{
-      display:grid;
+
+    .grid {
+      display: grid;
       grid-template-columns: 1.1fr .9fr;
       gap: 14px;
       margin-top: 18px;
     }
-    @media (max-width: 860px){
-      .grid{ grid-template-columns: 1fr; }
-      .pillrow{ justify-content:flex-start; }
-      header{ flex-direction:column; }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      .pillrow { justify-content: flex-start; }
+      header { flex-direction: column; }
     }
-    .card{
+
+    .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 16px 16px;
-      overflow:hidden;
+      padding: 18px;
+      overflow: hidden;
     }
-    .card h2{
+
+    .card h2 {
       margin: 0 0 10px;
       font-size: 16px;
       letter-spacing: .2px;
-      color: rgba(234,240,255,.95);
+      color: rgba(234, 240, 255, .95);
     }
-    .lead{
-      margin:0;
+
+    .section-title {
+      margin-top: 16px !important;
+    }
+
+    .lead {
+      margin: 0;
       color: var(--muted);
       font-size: 14.5px;
     }
-    ul{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-    li{ margin: 8px 0; }
-    .links{
-      display:grid;
+
+    .links {
+      display: grid;
       grid-template-columns: 1fr;
-      gap:10px;
-      margin-top: 10px;
+      gap: 10px;
+      margin-top: 12px;
     }
-    .linkbox{
+
+    .linkbox {
       background: var(--card2);
-      border: 1px solid rgba(255,255,255,.14);
+      border: 1px solid rgba(255, 255, 255, .14);
       border-radius: 14px;
-      padding: 12px 12px;
+      padding: 12px;
     }
-    .linkbox .k{
-      display:flex;
-      gap:10px;
-      align-items:center;
+
+    .linkbox .k {
+      display: flex;
+      gap: 10px;
+      align-items: center;
       font-size: 13px;
       color: var(--muted);
       margin-bottom: 6px;
     }
-    .dot{
-      width:10px;height:10px;border-radius:50%;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 0 5px rgba(124,92,255,.18);
+      box-shadow: 0 0 0 5px rgba(124, 92, 255, .18);
       flex: 0 0 auto;
     }
-    .dot.green{
+
+    .dot.green {
       background: var(--accent2);
-      box-shadow: 0 0 0 5px rgba(34,197,94,.16);
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, .16);
     }
-    .linkbox a{
-      border-bottom: 1px solid rgba(255,255,255,.18);
+
+    .linkbox a {
+      display: inline-block;
+      border-bottom: 1px solid rgba(255, 255, 255, .18);
       word-break: break-word;
-    }
-    .footer{
-      margin-top: 14px;
-      color: rgba(234,240,255,.6);
-      font-size: 12.5px;
-    }
-    .quote{
-      padding: 12px 14px;
-      border-left: 3px solid rgba(124,92,255,.75);
-      background: rgba(124,92,255,.08);
-      border-radius: 12px;
-      color: rgba(234,240,255,.82);
-      margin-top: 12px;
       font-size: 14px;
     }
-    .two{
-      display:grid;
+
+    .linkbox a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .link-desc {
+      color: rgba(234, 240, 255, .75);
+      font-size: 13.5px;
+      margin-top: 2px;
+    }
+
+    .id-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .quote {
+      padding: 12px 14px;
+      border-left: 3px solid rgba(124, 92, 255, .75);
+      background: rgba(124, 92, 255, .08);
+      border-radius: 12px;
+      color: rgba(234, 240, 255, .85);
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    .two {
+      display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
-    @media (max-width: 560px){
-      .two{ grid-template-columns: 1fr; }
+
+    @media (max-width: 560px) {
+      .two { grid-template-columns: 1fr; }
     }
-    .meta{
-      background: rgba(255,255,255,.04);
-      border: 1px dashed rgba(255,255,255,.16);
+
+    .meta {
+      background: rgba(255, 255, 255, .04);
+      border: 1px dashed rgba(255, 255, 255, .16);
       border-radius: 14px;
       padding: 12px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13.5px;
     }
-    .meta b{ color: var(--text); }
-    .btn{
-      display:inline-block;
-      margin-top: 10px;
+
+    .meta b { color: var(--text); }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
       padding: 10px 12px;
       border-radius: 12px;
-      background: rgba(124,92,255,.18);
-      border: 1px solid rgba(124,92,255,.38);
+      background: rgba(124, 92, 255, .18);
+      border: 1px solid rgba(124, 92, 255, .38);
       color: var(--text);
+      font-size: 13.5px;
     }
-    .btn:hover{ background: rgba(124,92,255,.26); }
+
+    .btn:hover {
+      background: rgba(124, 92, 255, .28);
+      border-bottom-color: rgba(124, 92, 255, .38);
+    }
+
+    .footer {
+      margin-top: 16px;
+      color: rgba(234, 240, 255, .6);
+      font-size: 12.5px;
+    }
   </style>
 </head>
 
@@ -202,147 +263,143 @@
         <p class="sub">Professor, Pesquisador e Desenvolvedor Independente</p>
       </div>
       <div class="pillrow" aria-label="Destaques">
-        <div class="pill"><b>Defendo Ciência Aberta Livre e Irrestrita</div>
-        <div class="pill"><b>Minhas Publicações são em DeSci, Ciência descentralizada</div>
-        <div class="pill"><b>Faço Registro e provas anterioridade nas Blockchain's</div>
+        <div class="pill">Defendo Ciência Aberta, Livre e Irrestrita</div>
+        <div class="pill">Publicações em DeSci (Ciência Descentralizada)</div>
+        <div class="pill">Registros e Provas de Anterioridade em Blockchains</div>
       </div>
     </header>
 
     <div class="grid">
       <section class="card">
-        <h2>Projetos & Autorias</h2>
+        <h2>Projetos &amp; Autorias</h2>
         <p class="lead">
-          Autor e desenvolvedor da Arquitetura Computacional por Topologia de Campos, linguagens computacionais baseadas em geometria/topologia
-          e protocolos bioinspirados "Biomimética" para redução de ambiguidade em LLMs.
-    O foco dos meus trabalhos estão na busca de otimização, alta eficiência e sustentabilidade "baixo consumo de recursos".
-    Nesse um ano desde a primeira publicação, recebi 79 recomendações de especialistas no Research Gate bem como, sugiram mais de 30 projetos intimamente relacionados e compatíveis com meus trabalhos.
+          Autor e desenvolvedor da Arquitetura Computacional por Topologia de Campos, linguagens computacionais baseadas em geometria/topologia e protocolos bioinspirados (biomimética) para redução de ambiguidade em LLMs.
+          O foco dos meus trabalhos está na busca por otimização, alta eficiência e sustentabilidade (baixo consumo de recursos).
+          Neste primeiro ano desde a publicação inicial, recebi 79 recomendações de especialistas no ResearchGate, além de terem surgido mais de 30 projetos intimamente relacionados e compatíveis com minhas pesquisas.
         </p>
 
         <div class="links">
           <div class="linkbox">
-            <div class="k"><span class="dot"></span><span>Comunidade / Linha emergente</span></div>
-            <a href="https://zenodo.org/communities/emerging_computing_paradigm" target="_blank" rel="noopener">
+            <div class="k"><span class="dot"></span><span>Comunidade / Linha Emergente</span></div>
+            <a href="https://zenodo.org/communities/emerging_computing_paradigm" target="_blank" rel="noopener noreferrer">
               Repositório Aberto (Zenodo)
             </a>
           </div>
 
           <div class="linkbox">
             <div class="k"><span class="dot"></span><span>Bear • Blog Resiliente</span></div>
-            <div class="k" style="margin-bottom:0"><span style="height:0"></span><span style="opacity:.75">—</span></div>
-     <a href="https://paragraph.com/@bear-3" target="_blank" rel="noopener">
-            <div style="color:rgba(234,240,255,.75); font-size:13.5px; margin-top:2px">
-             Publicações na plataforma Paragraph.
-            </div>
+            <a href="https://paragraph.com/@bear-3" target="_blank" rel="noopener noreferrer" class="link-desc">
+              Publicações na plataforma Paragraph.
+            </a>
           </div>
 
           <div class="linkbox">
-            <div class="k"><span class="dot"></span><span>Desci World • CTGV - System Versions </span></div>
-     <a href="https://desci.world/projects/ctgv-system-versions" target="_blank" rel="noopener">
-            <div style="color:rgba(234,240,255,.75); font-size:13.5px; margin-top:2px">
+            <div class="k"><span class="dot"></span><span>DeSci World • CTGV - System Versions</span></div>
+            <a href="https://desci.world/projects/ctgv-system-versions" target="_blank" rel="noopener noreferrer" class="link-desc">
               Projeto aberto a captação e colaboração.
-            </div>
+            </a>
           </div>
 
           <div class="linkbox">
-            <div class="k"><span class="dot"></span><span>REPOSITÓRIO • Publicações abertas na plataforma SCIENCE OPEN</span></div>
-     <a href="https://www.scienceopen.com/search#('order'~0_'context'~('user'~('id'~'2073ed89-28cb-4c5d-ac33-1544eae4e456'_'kind'~83)_'kind'~8)_'v'~4_'orderLowestFirst'~false_'kind'~77)" target="_blank" rel="noopener">            <div style="color:rgba(234,240,255,.75); font-size:13.5px; margin-top:2px">
+            <div class="k"><span class="dot"></span><span>Repositório • Publicações Abertas na ScienceOpen</span></div>
+            <a href="https://www.scienceopen.com/search#('order'~0_'context'~('user'~('id'~'2073ed89-28cb-4c5d-ac33-1544eae4e456'_'kind'~83)_'kind'~8)_'v'~4_'orderLowestFirst'~false_'kind'~77)" target="_blank" rel="noopener noreferrer" class="link-desc">
               Ampliando a presença digital em busca de apoiadores e parceiros.
-            </div>
+            </a>
           </div>
 
           <div class="linkbox">
             <div class="k"><span class="dot green"></span><span>CTGV System • PoC prática + formalização em Python</span></div>
-            <a href="https://github.com/Bear-urso/CTGV-System-V-1.5" target="_blank" rel="noopener">
+            <a href="https://github.com/Bear-urso/CTGV-System-V-1.5" target="_blank" rel="noopener noreferrer">
               CTGV-System-V-1.5 (GitHub)
             </a>
           </div>
 
           <div class="linkbox">
             <div class="k"><span class="dot green"></span><span>Licença • LIACC</span></div>
-            <a href="https://github.com/Bear-urso/LICENSE-LIACC-" target="_blank" rel="noopener">
-              LIACC - Licença para Inovação Aberta e Capitalização Colaborativa
+            <a href="https://github.com/Bear-urso/LICENSE-LIACC-" target="_blank" rel="noopener noreferrer">
+              LIACC — Licença para Inovação Aberta e Capitalização Colaborativa
             </a>
           </div>
         </div>
 
         <div class="quote">
-          Usando os recursos disponíveis e com provas de anterioridade registradas em blockchain é possível alcançar a autonomia e soberania digital .<br/>
-          Acredito no progresso através da exposição das Provas de Competências.<br/>
-          Abomino burocracia e sou ativista da soberania, autonomia e independência.
+          Usando os recursos disponíveis e com provas de anterioridade registradas em blockchain, é possível alcançar a autonomia e a soberania digital.<br />
+          Acredito no progresso através da exposição das Provas de Competência.<br />
+          Abomino a burocracia e sou ativista da soberania, autonomia e independência.
         </div>
       </section>
 
       <aside class="card">
-        <h2>DeSci, Ciência Aberta & Produções</h2>
+        <h2>DeSci, Ciência Aberta &amp; Produções</h2>
         <p class="lead">
-          Defendo Ciência Aberta Livre e Irrestrita. “Pois os Saberes são patrimônio da humanidade”
-          — e através da DeSci valorizaremos e perpetuaremos o conhecimento e seus autores.
+          Defendo Ciência Aberta, Livre e Irrestrita: “Pois os saberes são patrimônio da humanidade” — e através da DeSci valorizaremos e perpetuaremos o conhecimento e seus autores.
         </p>
 
         <div class="two">
           <div class="meta">
-            <b>Minhas Publicações estão  presentes em mais de 30 plataformas:</b><br/>
-            Zenodo • ResearchGate • scienceopen.com • OSF • Fighshere • archive.org  • Dentre outras.
+            <b>Minhas publicações estão presentes em mais de 30 plataformas:</b><br />
+            Zenodo • ResearchGate • ScienceOpen • OSF • Figshare • Archive.org • entre outras.
           </div>
           <div class="meta">
-            <b>Estou me empenhando fortemente na WEB3</b><br/>
-            pragraph.com • desci.world • memo.cash • NOSTR
+            <b>Atuação ativa no ecossistema Web3:</b><br />
+            paragraph.com • desci.world • memo.cash • Nostr
           </div>
         </div>
 
-        <h2 style="margin-top:14px">Identificadores</h2>
-        <div class="links" style="margin-top:6px">
+        <h2 class="section-title">Identificadores</h2>
+        <div class="links">
           <div class="linkbox">
             <div class="k"><span class="dot"></span><span>ORCID</span></div>
-            <a href="https://orcid.org/0009-0002-6109-7443" target="_blank" rel="noopener">
+            <a href="https://orcid.org/0009-0002-6109-7443" target="_blank" rel="noopener noreferrer">
               0009-0002-6109-7443
             </a>
           </div>
 
           <div class="linkbox">
             <div class="k"><span class="dot"></span><span>ResearchID</span></div>
-            <a href="https://researchid.co/begnomar" target="_blank" rel="noopener">
-              researchid.co/begnomar
-            </a>
-            <div style="height:6px"></div>
-            <a href="https://researchid.co/rid159975" target="_blank" rel="noopener">
-              researchid.co/rid159975
-            </a>
+            <div class="id-stack">
+              <a href="https://researchid.co/begnomar" target="_blank" rel="noopener noreferrer">
+                researchid.co/begnomar
+              </a>
+              <a href="https://researchid.co/rid159975" target="_blank" rel="noopener noreferrer">
+                researchid.co/rid159975
+              </a>
+            </div>
           </div>
 
           <div class="linkbox">
             <div class="k"><span class="dot"></span><span>Lattes</span></div>
-            <a href="http://lattes.cnpq.br/7980004971638916" target="_blank" rel="noopener">
+            <a href="http://lattes.cnpq.br/7980004971638916" target="_blank" rel="noopener noreferrer">
               ID Lattes: 7980004971638916
             </a>
           </div>
         </div>
 
-        <h2 style="margin-top:14px">Contato</h2>
-        <div class="linkbox" style="margin-top:6px">
-          <div class="k"><span class="dot green"></span><span>Gravatar</span></div>
-          <a href="https://br.gravatar.com/begnomar" target="_blank" rel="noopener">
-            https://br.gravatar.com/begnomar
+        <h2 class="section-title">Contato &amp; Registros</h2>
+        <div class="links">
+          <div class="linkbox">
+            <div class="k"><span class="dot green"></span><span>Gravatar</span></div>
+            <a href="https://br.gravatar.com/begnomar" target="_blank" rel="noopener noreferrer">
+              https://br.gravatar.com/begnomar
+            </a>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <a class="btn" href="https://viewblock.io/arweave/tx/BM9aZ_urdR5We9XxIG0V2Mg6hUQ9EPiWEVFTOEbVxBE" target="_blank" rel="noopener noreferrer">
+            Registro inicial da CTCE &amp; Gebit em 10 de junho de 2025
+          </a>
+
+          <a class="btn" href="https://archive.org/details/@begnomar_s_porto/web-archive" target="_blank" rel="noopener noreferrer">
+            Backup e Arquivo Permanente
+          </a>
+
+          <a class="btn" href="https://github.com/Bear-urso/LICENSE-LIACC-/blob/main/Identity%20Manifesto%20%E2%80%94%20Declara%C3%A7%C3%A3o%20de%20Identidade%20Digital%20.md" target="_blank" rel="noopener noreferrer">
+            Identidades Digitais
           </a>
         </div>
 
-
-        <a class="btn" href="https://viewblock.io/arweave/tx/BM9aZ_urdR5We9XxIG0V2Mg6hUQ9EPiWEVFTOEbVxBE" target="_blank" rel="noopener">
-          Registro inicial da CTCE & Gebit em 10 de junho de 2025
-        </a>
-
-        <a class="btn" href="https://archive.org/details/@begnomar_s_porto/web-archive" target="_blank" rel="noopener">
-          Back-up e Arquivo permanente
-        </a>
-
-
-        <a class="btn" href="https://github.com/Bear-urso/LICENSE-LIACC-/blob/main/Identity%20Manifesto%20%E2%80%94%20Declara%C3%A7%C3%A3o%20de%20Identidade%20Digital%20.md" target="_blank" rel="noopener">
-          Identidades Digitais
-        </a>
-
-        <div class="footer">Página estática em HTML By Begnomar # LIACC.</div>
-
-
+        <div class="footer">Página estática em HTML por Begnomar • Licença LIACC.</div>
       </aside>
     </div>
   </div>
